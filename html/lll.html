@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>口味调节</title>
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/delicious.css">
+    <link rel="stylesheet" href="../asset/css/commom.css">
+    <script src="../asset/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../asset/js/config.js"></script>
+    <script language="javascript" type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <script type="text/javascript" src="../js/share.js"></script>
+    <style type="text/css">
+        input[type=range] {
+            -webkit-appearance: none;
+            border-radius: 0; /*这个属性设置使填充进度条时的图形为圆角*/
+            background: -webkit-linear-gradient(#fff100, #fff100) no-repeat;
+            background-size: 50% 100%;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 15px;
+            border-radius: 0; /*将轨道设为圆角的*/
+            /*box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/*/
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 25px;
+            width: 26px;
+            margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+            background: #ffffff; 
+            border-radius: 0%; /*外观设置为圆形*/
+            /*border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+            box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+        }
+  </style>
+</head>
+<body style="background:url(../image/lb/taste/bg.jpg) center center;background-size:100%;">
+    <div class="container-fluid" id="find_detail">
+                <div class="row" style="height:45%;width:78%;margin:0 auto;">
+                    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="height: 100%;">
+                        <img class="item_img" src="../image/3.jpg" alt="" style="width:100%; height: 100%;">
+                        <div class="ider_box">
+                            <span>
+                                拿铁 <br />
+                                Lced Orange Juice
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="place">
+                    <span>请在下方选择您需要的口味</span> Please choose the taste you need.
+                </div>
+
+                <div class="row" style="padding:40px 20px 20px 20px; height: 54%;">
+                    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="height: 100%;">
+                        <div class="environment" style="height:auto;overflow:hidden;padding: 6px 0;">
+                            <div class="environment_text">
+                                
+                            </div>
+                            <div class="environment_select">
+                                <div class="hot">
+                                    <img style="width:100%;" src="../image/lb/taste/hot_action.png" alt="" />
+                                </div>
+                                <div class="cold">
+                                    <img style="width:100%;" src="../image/lb/taste/cold.png" alt="" />
+                                </div>
+                                <input type="hidden" value="1" id="ducHcold">
+                            </div>
+                       </div>
+                       <div class="coffee">
+                            <div  class="coffee_point">
+                                
+
+                                <input type="hidden" id="flavorId_sugar" value="" >
+                                <input type="hidden" id="bunkerNumber_sugar" value="">
+                            </div>
+                             <div  class="coffee_num" style="position:relative;">
+                                <div class="progr" style="width:100%;">
+                                    <img src="../image/lb/taste/_0017_shi.png" width="100%"  alt="" />
+                                </div>
+                                <p><span style="text-align: -webkit-left;"><img src="../image/lb/taste/0.png"alt="" /></span><span style="text-align: -webkit-left;"><img src="../image/lb/taste/2.png"alt="" /></span><span style="text-align: -webkit-right;"><img src="../image/lb/taste/5.png"alt="" /></span><span style="text-align: -webkit-right;"><img src="../image/lb/taste/75.png"alt="" /></span><span style="text-align: -webkit-right;"><img src="../image/lb/taste/100.png"alt="" /></span></p>
+                            </div>
+                        </div>
+                        <div class="coffee">
+                            <div  class="coffee_point">
+                                
+
+                                <input type="hidden" id="flavorId_sugar" value="" >
+                                <input type="hidden" id="bunkerNumber_sugar" value="">
+                            </div>
+                             <div  class="coffee_num" style="position:relative;">
+                                <div class="progr" style="width:100%;">
+                                    <img src="../image/lb/taste/_0017_shi.png" width="100%"  alt="" />
+                                </div>
+                                <p><span style="text-align: -webkit-left;"><img src="../image/lb/taste/0.png"alt="" /></span><span style="text-align: -webkit-left;"><img src="../image/lb/taste/2.png"alt="" /></span><span style="text-align: -webkit-right;"><img src="../image/lb/taste/5.png"alt="" /></span><span style="text-align: -webkit-right;"><img src="../image/lb/taste/75.png"alt="" /></span><span style="text-align: -webkit-right;"><img src="../image/lb/taste/100.png"alt="" /></span></p>
+                            </div>
+                        </div>
+            </div>
+                    </div>
+
+
+                    <div class="row" style="height: 7.3%;background:#000;line-height:53px;position:fixed;bottom:0;left:0;width:100%;">
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="height: 100%;">
+                            <span style="font-size:1.7rem; font-weight: bold;color:#fff;margin-left:4.5%;">合计:</span><span style="font-size: 2rem; color:#9f0802; font-weight: bold;margin-left:3.7%;">￥</span><span class="price"></span>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" style="text-align: right; height: 100%; ">
+                            <a href="javascript:void(0);" onclick="oder();" style="border:none; height: 100%; display: inline-block;"><img src="../image/lb/taste/_0019_OK.png" alt="" style="width:60%;margin-right:2.2%;" /></a>
+                        </div>
+                    </div><input type="hidden" id="formulaName" value="" ><input type="hidden" id="formulaMake" value="" >
+    </div>
+</body>
+<script type="text/javascript" src="../js/base.js"></script>
+    <script>
+        jQuery(function(){
+            // find_product_detail();
+
+            $.fn.RangeSlider = function(cfg){
+            this.sliderCfg = {
+                min: cfg && !isNaN(parseFloat(cfg.min)) ? Number(cfg.min) : null, 
+                max: cfg && !isNaN(parseFloat(cfg.max)) ? Number(cfg.max) : null,
+                step: cfg && Number(cfg.step) ? cfg.step : 1,
+                callback: cfg && cfg.callback ? cfg.callback : null
+            };
+
+            var $input = $(this);
+            var min = this.sliderCfg.min;
+            var max = this.sliderCfg.max;
+            var step = this.sliderCfg.step;
+            var callback = this.sliderCfg.callback;
+
+            $input.attr('min', min)
+                .attr('max', max)
+                .attr('step', step);
+
+            $input.bind("input", function(e){
+                $input.attr('value', this.value);
+                $input.css( 'background-size', this.value + '% 100%' ); 
+
+                if ($.isFunction(callback)) {
+                    callback(this);
+                }
+            });
+        };
+
+        var change = function($input) {
+                /*内容可自行定义*/
+                // console.log("123");
+            }
+        var inp = $(".range");
+        for(var i = 0; i < inp.length; i++)
+            {
+                var _sur = $("._sugar").val().split(',');
+                if (_sur[0] == "咖啡浓度" || _sur[0] == "茶浓度") 
+                    {
+                        $(inp[i]).RangeSlider({ min: 10,   max: 100,  step: 0.1,  callback: change});
+                    }
+                else
+                    {
+                        $(inp[i]).RangeSlider({ min: 0,   max: 100,  step: 0.1,  callback: change});
+                    };
+                
+            };
+            
+        });
+        
+    </script>
+</html
